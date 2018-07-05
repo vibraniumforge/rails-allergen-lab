@@ -6,7 +6,7 @@ In this project, we will be practicing object relationships in Rails. We will be
 
 ### `Recipe`
 
-- `index`––show all recipe instances, with the ability to sort by popularity. You can use a [search for this feature](http://guides.rubyonrails.org/form_helpers.html#a-generic-search-form)
+- `index`––show all recipe instances, with the ability to sort by number of ingredients. You can use a [search for this feature](http://guides.rubyonrails.org/form_helpers.html#a-generic-search-form)
 - `new`––ability to create a new recipe and associate it with a particular user. You may want to look into [collection select](http://api.rubyonrails.org/v5.2.0/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_select)
 
 ### `User`
