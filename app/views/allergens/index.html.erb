@@ -1,0 +1,6 @@
+<h1>Allergens Index</h1>
+
+<% @allergens.each do |allergen| %>
+  <%= allergen.ingredient_id %>
+  <%= allergen.user_id %><br>
+<% end %>

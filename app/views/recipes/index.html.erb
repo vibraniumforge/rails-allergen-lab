@@ -1,0 +1,6 @@
+<h1>Recipes Index</h1>
+<% byebug %>
+<% @recipes.each do |recipe| %>
+  <%= recipe.name %><br>
+  <%= recipe.ingredients.count %>
+<% end %>
