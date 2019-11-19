@@ -4,7 +4,7 @@ class IngredientsController < ApplicationController
     # @ingredients = Ingredient.all.sort_by do |ingredient|
     #   ingredient.users.count
     # end.reverse
-    @ingredients = Ingredient.left_joins(:users).group(:id).order('COUNT(users.id) DESC')
+    @ingredients = Ingredient.left_joins(:users).group(:id).order("count(users.id) DESC")
   end
 
   def show
