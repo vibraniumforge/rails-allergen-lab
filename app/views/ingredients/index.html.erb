@@ -1,5 +1,5 @@
 <h1>Ingredients Index</h1>
 
 <% @ingredients.each do |ingredient| %>
-  <%= ingredient.name %><br>
+  <%= link_to ingredient.name, ingredient %> (<%= ingredient.users.count %> allergic)<br>
 <% end %>

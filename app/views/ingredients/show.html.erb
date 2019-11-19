@@ -1,0 +1,7 @@
+<h1>Show an Ingredient</h1>
+
+<h3>Ingredient Name: <%= @ingredient.name %></h3>
+<h3>Present in: </h3>
+<% @ingredient.recipes.each do |recipe| %>
+  <p><%= recipe.name %></p>
+<% end %>

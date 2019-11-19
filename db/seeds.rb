@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Ingredient.destroy_all
+User.destroy_all
+Recipe.destroy_all
+Allergen.destroy_all
+RecipeIngredient.destroy_all
+
 i1 = Ingredient.create({name: "eggs"})
 i2 = Ingredient.create(name: "butter")
 i3 = Ingredient.create(name: "salt")
@@ -22,6 +28,8 @@ r1 = Recipe.create(name: "Sandwich", user_id: u1.id)
 r2 = Recipe.create(name: "Taco", user_id: u2.id)
 r3 = Recipe.create(name: "Pizza", user_id: u3.id)
 r4 = Recipe.create(name: "Hamburger", user_id: u4.id)
+r5 = Recipe.create(name: "User 4 Pizza", user_id: u4.id)
+r6 = Recipe.create(name: "User 4 Nachos", user_id: u4.id)
 
 a1 = Allergen.create(user_id: u1.id, ingredient_id: i1.id)
 a2 = Allergen.create(user_id: u2.id, ingredient_id: i2.id)
@@ -29,21 +37,25 @@ a3 = Allergen.create(user_id: u3.id, ingredient_id: i3.id)
 
 RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i1.id)
 RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i2.id)
-RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i3.id)
-RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i4.id)
-RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i5.id)
+
 
 RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i1.id)
 RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i2.id)
 RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i3.id)
-RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i4.id)
-RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i5.id)
+
 
 RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i1.id)
 RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i2.id)
 RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i3.id)
 RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i4.id)
-RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i5.id)
+
+
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i1.id)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i2.id)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i3.id)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i4.id)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i5.id)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i6.id)
 
 
 puts "seeds done!"

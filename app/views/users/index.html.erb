@@ -1,5 +1,8 @@
 <h1>Users Index</h1>
 
+<h3>User Names: </h3>
 <% @users.each do |user| %>
-  <%= user.name %><br>
+  <%= link_to user.name, user %><br>
 <% end %>
+
+<%= link_to "Create a New User", new_user_path %>

@@ -1,6 +1,9 @@
 <h1>Recipes Index</h1>
-<% byebug %>
 <% @recipes.each do |recipe| %>
-  <%= recipe.name %><br>
-  <%= recipe.ingredients.count %>
+  <p><%= recipe.name %> with <%= recipe.ingredients.count %> ingredients</p>
+  <br>
+<% end %>
+
+<%= form_tag(redcipes_path, method: "GET") do %>
+  <%= submit_tag("Unsorted") %>
 <% end %>
