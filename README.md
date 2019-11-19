@@ -7,7 +7,7 @@ In this project, we will be practicing object relationships in Rails. We will be
 ### `Recipe`
 
 [-] `index`––show all recipe instances, with the ability to sort by number of ingredients. You can use a [search for this feature](http://guides.rubyonrails.org/form_helpers.html#a-generic-search-form)
-- `new`––ability to create a new recipe and associate it with a particular user. You may want to look into [collection select](http://api.rubyonrails.org/v5.2.0/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_select)
+[-] `new`––ability to create a new recipe and associate it with a particular user. You may want to look into [collection select](http://api.rubyonrails.org/v5.2.0/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_select)
 
 ### `User`
 
@@ -16,7 +16,7 @@ In this project, we will be practicing object relationships in Rails. We will be
 
 ### `Ingredient`
 
-- `index` should show all ingredients, sorted by the number of users allergic to it. For example, if several users are allergic to peanut butter, it should appear higher on the list. You might want to look into [ActiveRecord Query Methods](https://guides.rubyonrails.org/active_record_querying.html)
+[-] `index` should show all ingredients, sorted by the number of users allergic to it. For example, if several users are allergic to peanut butter, it should appear higher on the list. You might want to look into [ActiveRecord Query Methods](https://guides.rubyonrails.org/active_record_querying.html)
 [-] `show` a particular ingredient. I should be able to see all of the recipes that an ingredient appears in
 
 ### `**Bonus**`

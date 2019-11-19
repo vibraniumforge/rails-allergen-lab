@@ -5,7 +5,9 @@ class RecipesController < ApplicationController
   end
 
   def sorted
-    @recipes = Recipe.get_sorted
+    @recipes = Recipe.all.sort_by do |recipe|
+      recipe.ingredients.count
+    end.reverse
   end
 
   def show
@@ -37,7 +39,6 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    byebug
     params.require(:recipe).permit(:name, :user_id)
   end
 end

@@ -4,6 +4,6 @@
   <br>
 <% end %>
 
-<%= form_tag(redcipes_path, method: "GET") do %>
-  <%= submit_tag("Unsorted") %>
+<%= form_tag("/sorted", method: "get") do %>
+  <%= submit_tag("Sort") %>
 <% end %>

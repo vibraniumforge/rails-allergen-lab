@@ -1,7 +1,9 @@
-<h1>Sorted Recipes</h1>
+<h1>Recipes Index</h1>
 <% @recipes.each do |recipe| %>
-  <%= recipe.name %>
-  <%= recipe.ingredients.count %>
+  <p><%= recipe.name %> with <%= recipe.ingredients.count %> ingredients</p>
   <br>
 <% end %>
 
+<%= form_tag(recipes_path, method: "get") do %>
+  <%= submit_tag("Unsort") %>
+<% end %>
